@@ -1,0 +1,17 @@
+.sign-control {
+    background-color: transparent;
+    border: none;
+    height: 16px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sign-control i::before {
+    color: #D7DCE1;
+    font-size: 16px;
+}
+
+.sign-control:hover i::before {
+    color: #66B1FF;
+}
+

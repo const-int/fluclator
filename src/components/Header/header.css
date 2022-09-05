@@ -1,0 +1,21 @@
+.header {
+  background-color: #081A2E;
+  border-bottom: 1px solid #0E355A;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  grid-gap: 16px;
+  align-items: center;
+}
+
+.header-icon::before {
+  font-size: 24px;
+  color: #027FFF
+}

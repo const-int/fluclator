@@ -1,0 +1,53 @@
+.select-button {
+  position: relative;
+  left: -1px;
+  background: #132F4C;
+  border: 1px solid #1B4773 !important;
+  width: 60px;
+  padding: 0;
+  z-index: 0 !important;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.select-button:hover {
+  box-shadow: none !important;
+  border-color: #3399ff !important;
+  background: #173B5E;
+}
+.select-button:hover .select-button-circle {
+  border-color: #FFF;
+}
+
+.select-button:focus {
+  box-shadow: none !important;
+  border: 1px solid #173B5E !important;
+}
+
+.select-button span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.select-button span i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -44%);
+  color: #FFF;
+  font-size: 20px;
+  color: #8896A5;
+}
+
+.select-button.is-active span i::before {
+  color: #FFF;
+}
+
+.select-button-circle {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #66B2FF;
+  border-radius: 50%;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
