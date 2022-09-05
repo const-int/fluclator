@@ -4,6 +4,7 @@
     height: 16px;
     padding: 0;
     cursor: pointer;
+    outline: none !important;
 }
 
 .sign-control i::before {

@@ -56,6 +56,17 @@ function App() {
     return formattedIntegerPart + "." + cleanDecimal;
   }
 
+  function handlePercentInput(value) {
+    const intVal = parseFloat(value);
+
+    if (intVal > 100 && !isPositivePercent) {
+      setPercent("100");
+      return;
+    }
+
+    setPercent(format(value));
+  }
+
   useEffect(() => {
     const sourceVal = parseFloat(source.replace(/[^0-9$.]/g, "") || 0);
     const targetVal = parseFloat(target.replace(/[^0-9$.]/g, "") || 0);
@@ -167,7 +178,7 @@ function App() {
               <input
                 type="text"
                 className="input is-large"
-                onChange={(e) => setPercent(format(e.target.value))}
+                onChange={(e) => handlePercentInput(e.target.value)}
                 onBlur={() =>
                   setPercent(percent === "" ? nonEmptyPercent : percent)
                 }
