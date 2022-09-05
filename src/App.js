@@ -137,6 +137,7 @@ function App() {
                 }
                 value={source}
                 ref={sourceRef}
+                pattern="[0-9]*"
               />
 
               {calcField !== FIELDS.source && (
@@ -184,6 +185,7 @@ function App() {
                 }
                 value={percent}
                 ref={percentRef}
+                pattern="[0-9]*"
               />
 
               {calcField !== FIELDS.percent && (
@@ -224,6 +226,7 @@ function App() {
                 }
                 value={target}
                 ref={targetRef}
+                pattern="[0-9]*"
               />
 
               {calcField !== FIELDS.target && (
