@@ -121,7 +121,7 @@ function App() {
 
       <div className="container fields-grid">
         <div className="field source-value">
-          <label className="label is-medium">Initial Value</label>
+          <label className="label is-medium">Starting Amount</label>
           <div
             className={`input-component ${
               calcField === FIELDS.source ? "is-active" : ""
@@ -158,7 +158,7 @@ function App() {
         </div>
 
         <div className="field percent-value">
-          <label className="label is-medium">Difference</label>
+          <label className="label is-medium">Fluctuation</label>
           <div
             className={`input-component ${
               calcField === FIELDS.percent ? "is-active" : ""
@@ -210,7 +210,7 @@ function App() {
         </div>
 
         <div className="field target-value">
-          <label className="label is-medium">Changed Value</label>
+          <label className="label is-medium">Final Amount</label>
           <div
             className={`input-component ${
               calcField === FIELDS.target ? "is-active" : ""
