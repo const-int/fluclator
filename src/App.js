@@ -27,6 +27,13 @@ function App() {
 
   function format(val) {
     val = val + "";
+
+    if (val.length && val[val.length - 1] === ",") {
+      val = val.split("");
+      val[val.length - 1] = ".";
+      val = val.join("");
+    }
+
     const hasPoint = val.includes(".");
     const [integer, decimals] = val.split(".");
     const cleanInteger = parseFloat(
@@ -146,6 +153,7 @@ function App() {
             <div className="control is-expanded">
               <input
                 type="text"
+                inputMode="decimal"
                 className="input is-large"
                 onChange={(e) => setSource(format(e.target.value))}
                 onBlur={() =>
@@ -192,6 +200,7 @@ function App() {
               </div>
               <input
                 type="text"
+                inputMode="decimal"
                 className="input is-large"
                 onChange={(e) => handlePercentInput(e.target.value)}
                 onBlur={() =>
@@ -233,6 +242,7 @@ function App() {
             <div className="control is-expanded">
               <input
                 type="text"
+                inputMode="decimal"
                 className="input is-large"
                 onChange={(e) => setTarget(format(e.target.value))}
                 onBlur={() =>
