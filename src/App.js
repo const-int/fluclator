@@ -56,7 +56,23 @@ function App() {
     return formattedIntegerPart + "." + cleanDecimal;
   }
 
+  function recalculate() {
+    setTimeout(() => {
+      setToggleCalculate(toggleCalculate + 1);
+    }, 100);
+  }
+
   function handlePercentInput(value) {
+    if (value.includes("-")) {
+      setIsPositivePercent(false);
+      recalculate();
+    }
+
+    if (value.includes("+")) {
+      setIsPositivePercent(true);
+      recalculate();
+    }
+
     const intVal = parseFloat(value);
 
     if (intVal > 100 && !isPositivePercent) {
@@ -170,9 +186,7 @@ function App() {
                   isPositive={isPositivePercent}
                   onClick={() => {
                     setIsPositivePercent(!isPositivePercent);
-                    setTimeout(() => {
-                      setToggleCalculate(toggleCalculate + 1);
-                    }, 100);
+                    recalculate();
                   }}
                 />
               </div>
