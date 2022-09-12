@@ -63,6 +63,17 @@ function App() {
     return formattedIntegerPart + "." + cleanDecimal;
   }
 
+  function trim(num) {
+    const precisedNum = num.toPrecision(5);
+    const [integer, decimal] = precisedNum.split(".");
+
+    if (!decimal.replaceAll("0", "")) {
+      return integer;
+    }
+
+    return precisedNum;
+  }
+
   function recalculate() {
     setTimeout(() => {
       setToggleCalculate(toggleCalculate + 1);
@@ -107,7 +118,9 @@ function App() {
         return;
       }
 
-      const nextTargetVal = sourceVal * (1 + (percentSign * percentVal) / 100);
+      const nextTargetVal = trim(
+        sourceVal * (1 + (percentSign * percentVal) / 100)
+      );
       setTarget(format(nextTargetVal));
       setIsPositivePercent(nextTargetVal > sourceVal);
     }
@@ -123,7 +136,9 @@ function App() {
         return;
       }
 
-      const nextSourceVal = targetVal / (1 + (percentSign * percentVal) / 100);
+      const nextSourceVal = trim(
+        targetVal / (1 + (percentSign * percentVal) / 100)
+      );
       setSource(format(nextSourceVal));
       setIsPositivePercent(targetVal > nextSourceVal);
     }
@@ -133,7 +148,7 @@ function App() {
         return;
       }
 
-      setPercent(format((targetVal / sourceVal - 1) * 100));
+      setPercent(format(trim(targetVal / sourceVal - 1) * 100));
       setIsPositivePercent(targetVal > sourceVal);
     }
   }, [source, target, percent, calcField, toggleCalculate]);
