@@ -25,7 +25,7 @@
   color: #FFFFFF !important;
 }
 
-.input:focus + .clear-button i::before {
+.input:focus ~ .clear-button i::before {
   color: #66B2FF;
 }
 
