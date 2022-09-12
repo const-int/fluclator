@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/fluclator/static/css/main.402f1993.css",
-    "main.js": "/fluclator/static/js/main.38405605.js",
+    "main.css": "/fluclator/static/css/main.96d7d12a.css",
+    "main.js": "/fluclator/static/js/main.e848d4d7.js",
     "static/js/787.28cb0dcd.chunk.js": "/fluclator/static/js/787.28cb0dcd.chunk.js",
     "static/media/fa-solid-900.ttf": "/fluclator/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
     "static/media/fa-brands-400.ttf": "/fluclator/static/media/fa-brands-400.aff1938a5c48584fa92b.ttf",
@@ -12,12 +12,12 @@
     "static/media/fa-v4compatibility.ttf": "/fluclator/static/media/fa-v4compatibility.ea8535110e0c42fd0046.ttf",
     "static/media/fa-v4compatibility.woff2": "/fluclator/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
     "index.html": "/fluclator/index.html",
-    "main.402f1993.css.map": "/fluclator/static/css/main.402f1993.css.map",
-    "main.38405605.js.map": "/fluclator/static/js/main.38405605.js.map",
+    "main.96d7d12a.css.map": "/fluclator/static/css/main.96d7d12a.css.map",
+    "main.e848d4d7.js.map": "/fluclator/static/js/main.e848d4d7.js.map",
     "787.28cb0dcd.chunk.js.map": "/fluclator/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.402f1993.css",
-    "static/js/main.38405605.js"
+    "static/css/main.96d7d12a.css",
+    "static/js/main.e848d4d7.js"
   ]
 }
