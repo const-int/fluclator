@@ -69,7 +69,7 @@ function App() {
     const precisedNum = num.toPrecision(12);
     const [integer, decimal] = precisedNum.split(".");
 
-    if (decimal.substring(0, 2) === "00") {
+    if (decimal && decimal.substring(0, 2) === "00") {
       return integer;
     }
 

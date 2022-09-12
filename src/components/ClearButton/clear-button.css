@@ -11,7 +11,7 @@
 }
 
 .clear-button i::before {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 10px;
   position: absolute;
   top: 50%;
@@ -23,4 +23,12 @@
 
 .clear-button:hover i::before {
   color: #FFFFFF !important;
+}
+
+.input:focus + .clear-button i::before {
+  color: #66B2FF;
+}
+
+.input-component:not(.is-active):hover .clear-button i::before {
+  color: #66B2FF;
 }
