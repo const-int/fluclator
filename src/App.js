@@ -8,6 +8,7 @@ import SelectCalcButton from "./components/SelectCalcButton";
 import Header from "./components/Header";
 import useInputValue from "./hooks/useInputValue";
 import SignControl from "./components/SignControl";
+import PercentSign from "./components/PercentSign";
 
 function App() {
   const FIELDS = {
@@ -204,15 +205,13 @@ function App() {
             } field has-addons`}
           >
             <div className="control is-expanded has-plus-minus">
-              <div className="plus-minus">
-                <SignControl
-                  isPositive={isPositivePercent}
-                  onClick={() => {
-                    setIsPositivePercent(!isPositivePercent);
-                    recalculate();
-                  }}
-                />
-              </div>
+              <SignControl
+                isPositive={isPositivePercent}
+                onClick={() => {
+                  setIsPositivePercent(!isPositivePercent);
+                  recalculate();
+                }}
+              />
               <input
                 type="text"
                 inputMode="decimal"
@@ -236,9 +235,7 @@ function App() {
                 />
               )}
 
-              <div className="percent-sign" style={{ left: 0 }}>
-                <div className="percent-value-hidden">{percent}</div>%
-              </div>
+              <PercentSign value={percent} />
             </div>
             <SelectCalcButton
               onClick={() => setCalcField(FIELDS.percent)}

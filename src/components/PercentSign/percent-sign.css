@@ -1,0 +1,19 @@
+.percent-sign {
+    position: absolute;
+    top: 12px;
+    padding-left: 42px;
+    left: 0;
+    z-index: 20;
+    font-size: 24px;
+    color: #D7DCE1;
+    pointer-events: none;
+}
+
+.percent-sign__hidden-value {
+    opacity: 0;
+    pointer-events: none;
+    display: inline-block;
+    left: 0;
+    font-size: 24px;
+    font-weight: 600;
+}

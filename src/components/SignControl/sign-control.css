@@ -1,4 +1,19 @@
 .sign-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 0 10px !important;
+    z-index: 20 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.sign-control__button {
     background-color: transparent;
     border: none;
     height: 20px;
@@ -7,13 +22,13 @@
     outline: none !important;
 }
 
-.sign-control i::before {
+.sign-control__button i::before {
     color: #D7DCE1;
     font-size: 16px;
 }
 
 @media (min-width: 601px) {
-    .sign-control:hover i::before {
+    .sign-control__button:hover i::before {
         color: #66B1FF;
     }
 }
