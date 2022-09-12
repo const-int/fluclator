@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import useInputValue from "./hooks/useInputValue";
 import SignControl from "./components/SignControl";
 import PercentSign from "./components/PercentSign";
+import CopyButton from "./components/CopyButton";
 
 function App() {
   const FIELDS = {
@@ -180,7 +181,9 @@ function App() {
                 pattern="[0-9]*"
               />
 
-              {calcField !== FIELDS.source && (
+              {calcField === FIELDS.source ? (
+                <CopyButton value={source} />
+              ) : (
                 <ClearButton
                   inputValue={source}
                   onClick={() => {
@@ -225,7 +228,9 @@ function App() {
                 pattern="[0-9]*"
               />
 
-              {calcField !== FIELDS.percent && (
+              {calcField === FIELDS.percent ? (
+                <CopyButton value={percent} />
+              ) : (
                 <ClearButton
                   inputValue={percent}
                   onClick={() => {
@@ -265,7 +270,9 @@ function App() {
                 pattern="[0-9]*"
               />
 
-              {calcField !== FIELDS.target && (
+              {calcField === FIELDS.target ? (
+                <CopyButton value={target} />
+              ) : (
                 <ClearButton
                   inputValue={target}
                   onClick={() => {

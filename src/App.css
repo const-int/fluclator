@@ -70,9 +70,9 @@ body {
 }
 
 .input-component.is-active input {
-  background-color: #014C99;
-  border-color: #027FFF;
-  color: #FFFFFF;
+  background-color: #014C99 !important;
+  border-color: #027FFF !important;
+  color: #FFFFFF !important;;
 }
 
 .input-component.is-active .sign-control.is-active i::before {

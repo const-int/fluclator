@@ -1,0 +1,29 @@
+.copy-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 20;
+    top: 14px;
+    right: 15px;
+    pointer-events: all !important;
+}
+
+.copy-button.is-copied {
+    pointer-events: none !important;
+}
+
+.copy-button i::before {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.copy-button i[hidden] {
+    display: none !important;
+}
+
+.copy-button:hover i::before {
+    color: rgba(255, 255, 255, 1);
+}
