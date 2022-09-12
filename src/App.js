@@ -64,7 +64,7 @@ function App() {
   }
 
   function trim(num) {
-    const precisedNum = num.toPrecision(5);
+    const precisedNum = num.toPrecision(12);
     const [integer, decimal] = precisedNum.split(".");
 
     if (!decimal.replaceAll("0", "")) {
