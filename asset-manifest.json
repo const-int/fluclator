@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/fluclator/static/css/main.96d7d12a.css",
+    "main.css": "/fluclator/static/css/main.76e01348.css",
     "main.js": "/fluclator/static/js/main.e848d4d7.js",
     "static/js/787.28cb0dcd.chunk.js": "/fluclator/static/js/787.28cb0dcd.chunk.js",
     "static/media/fa-solid-900.ttf": "/fluclator/static/media/fa-solid-900.422cfe2813b03d900c10.ttf",
@@ -12,12 +12,12 @@
     "static/media/fa-v4compatibility.ttf": "/fluclator/static/media/fa-v4compatibility.ea8535110e0c42fd0046.ttf",
     "static/media/fa-v4compatibility.woff2": "/fluclator/static/media/fa-v4compatibility.2ec4574b00d1d21ed0a3.woff2",
     "index.html": "/fluclator/index.html",
-    "main.96d7d12a.css.map": "/fluclator/static/css/main.96d7d12a.css.map",
+    "main.76e01348.css.map": "/fluclator/static/css/main.76e01348.css.map",
     "main.e848d4d7.js.map": "/fluclator/static/js/main.e848d4d7.js.map",
     "787.28cb0dcd.chunk.js.map": "/fluclator/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96d7d12a.css",
+    "static/css/main.76e01348.css",
     "static/js/main.e848d4d7.js"
   ]
 }
