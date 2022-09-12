@@ -11,6 +11,7 @@
     z-index: 20 !important;
     background: none !important;
     box-shadow: none !important;
+    order: -1;
 }
 
 .sign-control__button {
@@ -23,14 +24,17 @@
 }
 
 .sign-control__button i::before {
-    color: #D7DCE1;
+    color: #FFF;
     font-size: 16px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-@media (min-width: 601px) {
-    .sign-control__button:hover i::before {
-        color: #66B1FF;
-    }
+.input:focus + .sign-control i::before {
+    color: #7BBAFB;
+}
+
+.input-component:not(.is-active):hover .sign-control i::before {
+    color: #7BBAFB;
 }
 
 

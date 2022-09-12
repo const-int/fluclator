@@ -210,13 +210,6 @@ function App() {
             } field has-addons`}
           >
             <div className="control is-expanded has-plus-minus">
-              <SignControl
-                isPositive={isPositivePercent}
-                onClick={() => {
-                  setIsPositivePercent(!isPositivePercent);
-                  recalculate();
-                }}
-              />
               <input
                 type="text"
                 inputMode="decimal"
@@ -228,6 +221,14 @@ function App() {
                 value={percent}
                 ref={percentRef}
                 pattern="[0-9]*"
+              />
+
+              <SignControl
+                isPositive={isPositivePercent}
+                onClick={() => {
+                  setIsPositivePercent(!isPositivePercent);
+                  recalculate();
+                }}
               />
 
               {calcField === FIELDS.percent ? (

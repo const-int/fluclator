@@ -8,10 +8,14 @@
     top: 14px;
     right: 15px;
     pointer-events: all !important;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .copy-button.is-copied {
     pointer-events: none !important;
+}
+.copy-button.is-copied i::before {
+    color: rgba(255, 255, 255, 1);
 }
 
 .copy-button i::before {
@@ -24,6 +28,8 @@
     display: none !important;
 }
 
-.copy-button:hover i::before {
-    color: rgba(255, 255, 255, 1);
+@media (min-width: 601px) {
+    .copy-button:hover i::before {
+        color: rgba(255, 255, 255, 1);
+    }
 }
