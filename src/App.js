@@ -254,21 +254,21 @@ function App() {
                 inputMode="decimal"
                 className="input is-large"
                 onChange={(e) => handlePercentInput(e.target.value)}
-                onBlur={() =>
-                  setPercent(percent === "" ? nonEmptyPercent : percent)
-                }
-                value={percent}
+                onBlur={() => setPercent(percent === "" ? nonEmptyPercent : percent)}
+                value={percent == "0" ? "" : percent}
                 ref={percentRef}
                 pattern="[0-9]*"
               />
 
-              <SignControl
-                isPositive={isPositivePercent}
-                onClick={() => {
-                  setIsPositivePercent(!isPositivePercent);
-                  recalculate();
-                }}
-              />
+              {Boolean(+percent) && (
+                <SignControl
+                  isPositive={isPositivePercent}
+                  onClick={() => {
+                    setIsPositivePercent(!isPositivePercent);
+                    recalculate();
+                  }}
+                />
+              )}
 
               {calcField === FIELDS.percent ? (
                 <CopyButton value={percent} />
@@ -282,7 +282,7 @@ function App() {
                 />
               )}
 
-              <PercentSign value={percent} />
+              {Boolean(+percent) && (<PercentSign value={percent} />)}
             </div>
             <SelectCalcButton
               onClick={() => setCalcField(FIELDS.percent)}
