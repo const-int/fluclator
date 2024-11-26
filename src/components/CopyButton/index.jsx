@@ -28,6 +28,7 @@ function CopyButton({ value }) {
       className={`copy-button ${isCopied && "is-copied"}`}
       type="button"
       onClick={handleClick}
+      tabIndex={-1}
     >
       <span className="icon is-medium">
         <i className="fa-solid fa-circle-check" hidden={!isCopied} />

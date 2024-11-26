@@ -9,6 +9,7 @@ function SelectCalcButton({ isActive, onClick }) {
         className={`select-button button is-large ${
           isActive ? "is-active" : ""
         }`}
+        tabIndex={-1}
       >
         {isActive ? (
           <span>

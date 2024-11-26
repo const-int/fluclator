@@ -7,6 +7,7 @@ export default function SignControl({ isPositive, onClick }) {
         type="button"
         className="sign-control__button is-active"
         onClick={onClick}
+        tabIndex={-1}
       >
         <i className={`fas fa-${isPositive ? "plus" : "minus"}`} />
       </button>

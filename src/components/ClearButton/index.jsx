@@ -10,6 +10,7 @@ function ClearButton({ onClick, inputValue }) {
     <button
       className="clear-button button is-light is-medium is-rounded"
       onClick={onClick}
+      tabIndex={-1}
     >
       <span className="icon is-medium">
         <i className="fas fa-close"></i>
