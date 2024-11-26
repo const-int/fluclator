@@ -180,6 +180,7 @@ function App() {
                 ref={sourceRef}
                 pattern="[0-9]*"
                 autoFocus
+                tabIndex={calcField === FIELDS.source ? -1 : undefined}
               />
 
               {calcField === FIELDS.source ? (
@@ -220,6 +221,7 @@ function App() {
                 value={target}
                 ref={targetRef}
                 pattern="[0-9]*"
+                tabIndex={calcField === FIELDS.target ? -1 : undefined}
               />
 
               {calcField === FIELDS.target ? (
@@ -258,6 +260,7 @@ function App() {
                 value={percent == "0" ? "" : percent}
                 ref={percentRef}
                 pattern="[0-9]*"
+                tabIndex={calcField === FIELDS.percent ? -1 : undefined}
               />
 
               {Boolean(+percent) && (
