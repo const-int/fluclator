@@ -175,12 +175,11 @@ function App() {
                 inputMode="decimal"
                 className="input is-large"
                 onChange={(e) => setSource(format(e.target.value))}
-                onBlur={() =>
-                  setSource(source === "" ? nonEmptySource : source)
-                }
+                onBlur={() => setSource(source === "" ? nonEmptySource : source)}
                 value={source}
                 ref={sourceRef}
                 pattern="[0-9]*"
+                autoFocus
               />
 
               {calcField === FIELDS.source ? (
