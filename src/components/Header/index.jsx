@@ -7,7 +7,7 @@ function Header() {
       <div className="container">
         <div className="header-grid">
           <i className="fas fa-calculator header-icon"></i>
-          <span>Asset Fluctuation Calculator</span>
+          <span>Fluctuation Calculator</span>
         </div>
       </div>
     </div>
