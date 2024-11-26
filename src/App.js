@@ -20,7 +20,7 @@ function App() {
   const [source, setSource, nonEmptySource] = useInputValue();
   const [target, setTarget, nonEmptyTarget] = useInputValue();
   const [percent, setPercent, nonEmptyPercent] = useInputValue();
-  const [calcField, setCalcField] = useState(FIELDS.target);
+  const [calcField, setCalcField] = useState(FIELDS.percent);
   const [isPositivePercent, setIsPositivePercent] = useState(true);
   const [toggleCalculate, setToggleCalculate] = useState(0);
   const sourceRef = useRef();
@@ -202,6 +202,46 @@ function App() {
           </div>
         </div>
 
+        <div className="field target-value">
+          <label className="label is-medium">Final Amount</label>
+          <div
+            className={`input-component ${
+              calcField === FIELDS.target ? "is-active" : ""
+            } field has-addons`}
+          >
+            <div className="control is-expanded">
+              <input
+                type="text"
+                inputMode="decimal"
+                className="input is-large"
+                onChange={(e) => setTarget(format(e.target.value))}
+                onBlur={() =>
+                  setTarget(target === "" ? nonEmptyTarget : target)
+                }
+                value={target}
+                ref={targetRef}
+                pattern="[0-9]*"
+              />
+
+              {calcField === FIELDS.target ? (
+                <CopyButton value={target} />
+              ) : (
+                <ClearButton
+                  inputValue={target}
+                  onClick={() => {
+                    setTarget("");
+                    targetRef.current.focus();
+                  }}
+                />
+              )}
+            </div>
+            <SelectCalcButton
+              onClick={() => setCalcField(FIELDS.target)}
+              isActive={calcField === FIELDS.target}
+            />
+          </div>
+        </div>
+
         <div className="field percent-value">
           <label className="label is-medium">Fluctuation</label>
           <div
@@ -248,46 +288,6 @@ function App() {
             <SelectCalcButton
               onClick={() => setCalcField(FIELDS.percent)}
               isActive={calcField === FIELDS.percent}
-            />
-          </div>
-        </div>
-
-        <div className="field target-value">
-          <label className="label is-medium">Final Amount</label>
-          <div
-            className={`input-component ${
-              calcField === FIELDS.target ? "is-active" : ""
-            } field has-addons`}
-          >
-            <div className="control is-expanded">
-              <input
-                type="text"
-                inputMode="decimal"
-                className="input is-large"
-                onChange={(e) => setTarget(format(e.target.value))}
-                onBlur={() =>
-                  setTarget(target === "" ? nonEmptyTarget : target)
-                }
-                value={target}
-                ref={targetRef}
-                pattern="[0-9]*"
-              />
-
-              {calcField === FIELDS.target ? (
-                <CopyButton value={target} />
-              ) : (
-                <ClearButton
-                  inputValue={target}
-                  onClick={() => {
-                    setTarget("");
-                    targetRef.current.focus();
-                  }}
-                />
-              )}
-            </div>
-            <SelectCalcButton
-              onClick={() => setCalcField(FIELDS.target)}
-              isActive={calcField === FIELDS.target}
             />
           </div>
         </div>
